@@ -7,12 +7,24 @@
 \usepackage{newtxtext, newtxmath}
 \usepackage{tcolorbox}
 \usepackage{titlesec}
+\usepackage{xcolor}
+\definecolor{lightblue}{RGB}{135, 206, 250}
 \tcbuselibrary{skins,theorems}
 
 \titleformat{\section}[block]{\Large\bfseries\centering}{}{0pt}{}
 \titleformat{\subsection}[block]{\bfseries}{\thesubsection}{2pt}{}
 
-\newtcbtheorem[number within=section]{question}{\large\hspace{-8pt}Question}{
+\newtcbtheorem[no counter]{proposition}{\large\hspace{-8pt}Proposition}{
+  enhanced,
+  colback=white,
+  colframe=lightblue,
+  left=12pt,
+  right=12pt,
+  top=24pt,
+  bottom=24pt,
+  fonttitle=\bfseries
+}{prop}
+\newtcbtheorem[]{question}{\large\hspace{-8pt}Question :}{
   enhanced,
   colback=white,
   colframe=black,

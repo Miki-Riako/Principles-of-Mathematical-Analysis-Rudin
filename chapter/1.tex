@@ -52,5 +52,37 @@ So $\nexists r\in\mathbf{Q},\;r^2=12$.
 \hfill$Q.E.D.$\qedhere\hspace{42pt}
 
 \end{Proof}
+\begin{question}{}{}
+Prove Proposition 1.15.
+\end{question}
+\begin{proposition}{1.15}{}
+\itshape{
+The axioms for multiplication imply the following statements. 
 
+(a) If $x\neq0$ and $xy=xz$ then $y=z$. 
+
+(b) If $x\neq0$ and $xy=x$ then $y=1$. 
+
+(c) If $x\neq0$ and $xy=1$ then $y=1/x$. 
+
+(d) If $x\neq0$ then $1/(1/x)=x$.
+}
+\end{proposition}
+\begin{Proof}
+Since $x\neq0$, $\exists x^{-1}$ is the inverse of $x$. 
+
+If $xy=xz$, it gives:
+\begin{align*}
+y &=1\times y=(x^{-1} x)y=x^{-1}(xy) \\
+  &=x^{-1}(xz)=(x^{-1}x)z=z
+\end{align*}
+
+This proves (a). Take $z=1$ in (a) to obtain (b).
+
+Take $z=x^{-1}$ in (a) to obtain (c).
+
+Since $x^{-1}x=1$, (c)(with $x^{-1}$ in place of $x$) gives (d).
+
+\hfill$Q.E.D.$\qedhere\hspace{42pt}
+\end{Proof}
 \newpage
