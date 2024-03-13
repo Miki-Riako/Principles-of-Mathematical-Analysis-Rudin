@@ -85,4 +85,130 @@ Since $x^{-1}x=1$, (c)(with $x^{-1}$ in place of $x$) gives (d).
 
 \hfill$Q.E.D.$\qedhere\hspace{42pt}
 \end{Proof}
+\begin{question}{}{}
+Let $E$ be a nonempty subset of an ordered set;
+suppose $\alpha$ is a lower bound of $E$ 
+and $\beta$ is an upper bound of $E$.
+Prove that $\alpha\le\beta$.
+\end{question}
+\begin{Proof}
+Since $E$ is nonempty, and $\alpha$ is a lower bound of $E$.
+
+Thus $\forall x\in E,\;x\ge\alpha$.
+
+Similarly, $\forall x\in E,\;x\le\beta$.
+
+Thus $\forall x\in E,\;\alpha\le x\le\beta$.
+i.e. $\alpha\le\beta$.
+
+\hfill$Q.E.D.$\qedhere\hspace{42pt}
+\end{Proof}
+\begin{question}{}{}
+Let $A$ be a nonempty set of real numbers which is bounded below.
+Let $-A$ be the set of all numbers $-x$, where $x\in A$.
+Prove that 
+$$\inf A=-\sup(-A).$$
+\end{question}
+\begin{Proof}
+Let $\alpha=\inf A$, $\forall x\in A$, $\alpha\le x$
+
+Thus, $\forall x\in A,\:-x\le-\alpha$. i.e. let $y=-x,\:\forall y\in-A,\:y\le-\alpha$. 
+
+which means $-\alpha$ is the upper bound of $-A$.
+
+Since $\alpha=\inf A$, thus $\forall x>\alpha$,
+$x$ is not the lower bound of $A$.
+
+Thus $\forall-x<-\alpha$, $-x=y$ is not the upper bound of $-A$.
+
+Since $-\alpha$ is the upper bound of $-A$,
+and $\forall y<-\alpha$, $y$ is not the upper bound of $-A$.
+
+Thus $-\alpha=\sup(-A)$, i.e. $\inf A=-\sup(-A)$.
+
+\hfill$Q.E.D.$\qedhere\hspace{42pt}
+\end{Proof}
+\begin{question}{}{}
+Fix $b>1$. 
+
+(a) If $m,\:n,\:p,\:q$ are integers, $n>0,\:q>0$,
+and $r=m/n=p/q$, prove that$$(b^m)^{1/n}=(b^p)^{1/q}$$
+
+Hence it makes sense to define $b^r=(b^m)^{1/n}$.
+
+(b) Prove that $b^{r+s}=b^rb^s$ if $r$ and $s$ are rational. 
+
+(c) If $x$ is real,
+define $B(x)$ to be the set of all numbers $b^t$,
+where $t$ is rational and $t\le x$.
+Prove that $$b^r=\sup B(r)$$
+when $r$ is rational.
+Hence it makes sense to define $$b^x=\sup B(x)$$
+for every real $x$.
+
+(d) Prove that $b^{x+y}=b^xb^y$ for all real $x$ and $y$.
+\end{question}
+\begin{Proof}
+(a)\quad Let $x=(b^m)^{1/n}$,
+which means $x^n=b^m$.
+
+Thus $x^{nq}=b^{mq}$, i.e. $x^q=(x^{mq})^{1/n}$.
+
+Since $m/n=p/q$, gets $p=qm/n$,
+hence $x^q=(b^{mq})^{1/n}=b^p$.
+i.e. $x=(b^p)^{1/n}$.
+
+Thus, $(b^m)^{1/n}=(b^p)^{1/q}$.
+\newline
+
+(b)\quad Let $r=\frac{m}{n},\:s=\frac{x}{y}$,
+so $r+s=\frac{m}{n}+\frac{x}{y}=\frac{my+nx}{ny}$
+
+Thus,
+$b^{r+s}=b^\frac{my+nx}{ny}=(b^{my}b^{nx})^{\frac{1}{ny}}=(b^m)^{\frac{1}{n}}(b^x)^{\frac{1}{y}}=b^rb^s$
+\newline
+
+(c)\quad Let $x=r$,
+then $\forall t,\:t\le r$, when $b^t\in B(r)$, $b^t\le b^r$,
+$b^r$ is the upper bound of $B(r)$.
+
+$\forall x<r\;\;\exists t,\:x<t<r,\:b^t>b^x$,
+which means the $x$ is not the upper bound of $B(r)$.
+
+Thus $b^r=\sup B(r)$ holds.
+\newline
+
+(d)\quad
+To prove $b^{x+y}=b^xb^y$,
+we can prove $\sup B(x+y)=\sup B(x)\sup B(y)$.
+
+Now to prove $\sup B(x)\sup B(y)$ is the upper bound of $B(x+y)$.
+
+$\forall r\in\mathbf{Q},\:r\le x+y$,
+since $\exists r_1\le x,\:r_2\le y,\:r_1+r_2=r$,
+which gives
+$b^{r_1}\le\sup B(x),\:b^{r_2}\le\sup B(y)$,
+i.e. $b^{r_1+r_2}\le\sup B(x)\sup B(y)$,
+i.e. $b^{r}\le\sup B(x)\sup B(y)$.
+
+Then to prove $\sup B(x)\sup B(y)=\sup B(x+y)$.
+
+Suppose $\exists z$ is the upper bound of $B(x+y)$,
+and $z<\sup B(x)\sup B(y)$.
+
+Since $z$ is the upper bound of $B(x+y)$.
+
+$\forall r_1\le x,\:r_2\le y,\:b^{r_1}b^{r_2}\le z$ and $\sup B(x)b^{r_2}\le z,\:b^{r_1}\sup B(y)\le z$.
+
+So $\sup B(x)b^{r_2}b^{r_1}\sup B(y)\le zz<z\sup B(x)\sup B(y)$,
+i.e.$b^{r_1}b^{r_2}<z$,
+
+contradicting with $z\le b^{r_1}b^{r_2}$.
+
+Thus, there are no upper bound of $B(x+y)$ less than $\sup B(x)\sup B(y)$.
+
+Done.
+
+\hfill$Q.E.D.$\qedhere\hspace{42pt}
+\end{Proof}
 \newpage
